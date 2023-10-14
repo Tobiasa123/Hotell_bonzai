@@ -1,0 +1,764 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+
+
+/***********NAVBAR*********/
+
+.fake__hamburger{
+    grid-area: hamburger;
+    display:none;
+    flex-direction: column;
+    align-items:  flex-end;
+    justify-content:center;
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+    gap: 0.1rem;
+    background-image: url(../assets/logo/bonz.ai-logo-color-symbol.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fake__hamburger-bar{
+    width: 3rem;
+    height: 0.3rem;
+    border: 0.2rem solid rgb(71, 208, 158);
+    border-radius: 1rem;
+    background-color: rgb(81, 81, 81);
+    margin-right: 1rem;
+
+}
+.fake__hamburger-bar:nth-child(3){
+    width: 2rem;
+
+}
+
+.navbar{
+    grid-area: navbar;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 4rem;
+    width: 100%;
+
+}
+
+.navbar__list{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(91, 196, 175);
+    background-color: rgb(56, 56, 56);
+
+    height: 3.5rem;
+    width: 12vw;
+}
+
+.navbar__img{
+    background-image: url(../assets/logo/bonz.ai-logo-color-landscape.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width:20rem;
+    height: 3.5rem;
+}
+.navbar__item:hover{
+    background-color: rgb(30, 30, 30);
+}
+.navbar a{
+    text-decoration: none;
+  
+}
+
+
+/*****CSS INDEX****/
+
+
+.index__wrapper{
+    height: 200vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.2fr 3fr 2fr 2fr;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar navbar"
+    "main__landing main__landing main__landing main__landing main__landing main__landing"
+    "services services services services services services"
+    "footer footer footer footer footer footer";
+    margin: auto;
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+}
+
+
+/*******MAIN AREA********/
+
+.main__landing{
+    grid-area: main__landing;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/photos/futuristic_hotel.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.main__landing-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 50%;
+    height: 30rem;
+    backdrop-filter: blur(8px);
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(255, 255, 255);
+}
+.main__landing-heading{
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    text-decoration:underline;
+    background-color: rgb(89, 199, 157)
+}
+.main__landing-para{
+    color: white;
+    transform: translateY(50%);
+    font-size: 2rem;
+
+}
+.main__landing-para span{
+    text-decoration: line-through;
+
+}
+.main__landing-btn{
+    background-color: rgb(60, 60, 60);
+    border-radius: 1rem;
+    width: 15rem;
+    height: 5rem;
+    color: rgb(255, 255, 255);
+    border: 0.1rem solid white;
+    font-weight: 800;
+    font-size: 1rem;
+    transform: translateY(50%);
+}
+.main__landing-btn:hover{
+    background-color: rgb(100, 217, 172)
+}
+
+
+
+/*******SERVICES AREA********/
+
+.services{
+    display: flex;
+    flex-direction: column;
+    grid-area: services;
+    background-color: rgb(0, 0, 0);
+ 
+}
+
+.services__heading{
+    align-self: center;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    margin-top: 2%;
+}
+
+
+.services__container{
+    background-color:inherit;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+
+.services__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: rgb(95, 222, 167);
+    text-align: center;
+    box-shadow: 0px 13px 15px 13px rgba(85, 14, 106, 0.75);
+}
+.services__item h3{
+    text-decoration: overline 0.2rem;
+}
+
+
+.services__item-evening{
+    width: 2.5rem;
+ 
+}
+.services__item-adventure{
+    width: 1.8rem;
+}
+.services__item-travel{
+    width: 1.8rem;
+}
+.services__item-party{
+    width: 2.8rem;
+ 
+}
+
+
+
+/*******FOOTER AREA********/
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(57, 0, 81);
+}
+.footer__heading{
+    align-self: center;
+    margin: 2%;
+    font-size: 3rem;
+    color: white;
+
+
+}
+.footer__image-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+   
+
+}
+.footer__image-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    border: 0.5rem solid white;
+    border-radius: 15rem;
+    min-width: 20rem;
+    height: 13rem;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(60, 60, 60);
+
+}
+.footer__image-item h2{
+    background-color: rgba(77, 77, 77, 0.573);
+    margin: auto;
+}
+
+.footer__image-item:nth-child(1){
+    background-image: url(../assets/photos/02-day.jpg);
+}
+.footer__image-item:nth-child(2){
+    background-image: url(../assets/photos/01-night.jpg);
+}
+.footer__image-item:nth-child(3){
+    background-image: url(../assets/photos/03-day.jpg);
+}
+.footer-image{
+    background-image: url(../assets/logo/bonz.ai-logo-white-symbol.png);
+    margin-top: 3rem;
+    justify-content: center;
+    align-self: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 6rem;
+    height: 6rem;
+}
+
+/*****MEDIA QUERY INDEX********/
+
+@media screen and (max-width: 600px){
+
+    .index__wrapper{
+        height: 200vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4rem 5fr 4fr 3fr;
+        grid-template-areas: 
+        "hamburger"
+        "main__landing"
+        "services"
+        "footer";
+        margin: auto;
+        background-color: rgb(209, 209, 209);
+    }
+    .navbar{
+        display: none;
+    }
+    .fake__hamburger{
+        display: flex;
+    }
+    .main__landing-wrapper{
+        border-radius: 0;
+    }
+  
+    .services__item{
+        border: 0.2rem solid;
+        height: 10rem;
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .services__item-evening{
+        width: 4rem;
+       
+    }
+    .services__item-adventure{
+        width: 3rem;
+    }
+    .services__item-travel{
+        width: 3rem;
+    }
+    .services__item-party{
+        width: 4rem;
+    }
+    
+    .footer__image-container{
+        gap: 1rem;
+       
+    }
+    .footer__image-item{   
+        width: 3rem;
+        height: 20rem;   
+        border-radius: 50%;
+        background-size: cover;
+
+    }
+    .footer__image-item h2{
+        background-color: rgba(255, 255, 255, 0.649);
+        margin: auto;
+    }
+
+}
+
+
+
+
+
+
+/********CSS BOOKING PAGE************/
+
+
+.booking__wrapper{
+    height: 200vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.2fr 2fr 1fr 3fr;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar navbar"
+    "main main main main main main"
+    "search search search search search search"
+    "grids grids grids grids grids grids";
+    margin: auto;
+    width: 100%;
+    background-color: rgb(226, 99, 99);
+}
+
+.main__book{
+    grid-area: main;
+    background-color: rgb(131, 131, 131);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/photos/bookingimage.jpg);
+    background-position:center;
+    
+    
+}
+.main__book-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    height: 20rem;
+    background-color: rgba(0, 0, 0, 0.087);
+    border: 0.1rem solid black;
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    text-align: center;
+    gap: 3rem;
+}
+.main__book-heading{
+    font-size: 3rem;
+    text-decoration: underline;
+    color: rgb(74, 227, 189);
+    background-color: black; 
+    min-width: 50%;
+}
+.main__book-btn{
+    background-color: rgb(60, 60, 60);
+    border-radius: 1rem;
+    width: 15rem;
+    height: 5rem;
+    color: rgb(255, 255, 255);
+    border: 0.1rem solid black;
+    font-weight: 800;
+    font-size: 1rem;
+}
+.main__book-btn:hover{
+    background-color: rgb(72, 226, 180);;
+    
+}
+
+.search__area{
+    grid-area: search;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+.search__area-heading{
+    font-size: 2rem;
+}
+.search__area-options{
+    width: 80%;
+    justify-content: center;
+    gap: 5rem;
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.booking__grid{
+    grid-area: grids;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    overflow:scroll;
+    background-color: rgb(33, 168, 127);
+
+}
+.booking_grid-item{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    background-color: rgb(200, 39, 39);
+    min-width: 18rem;
+    height: 12rem;
+    border: 0.3rem solid white;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+.booking_grid-item p{
+    transform: translateY(100%);
+    background-color: white;
+    border: 0.3rem solid white;
+    width: 100%;
+    border-radius: inherit;
+    text-align: center;
+
+}
+
+
+
+
+.booking_grid-item:nth-child(1){
+    background-image: url(../assets/photos/01-night.jpg);
+
+}
+.booking_grid-item:nth-child(2){
+    background-image: url(../assets/photos/room1.jpg);
+
+}
+.booking_grid-item:nth-child(3){
+    background-image: url(../assets/photos/room2.jpg);
+
+}
+.booking_grid-item:nth-child(4){
+    background-image: url(../assets/photos/room3.jpg);
+
+}
+.booking_grid-item:nth-child(5){
+    background-image: url(../assets/photos/03-day.jpg);
+
+}
+.booking_grid-item:nth-child(6){
+    background-image: url(../assets/photos/room5.jpg);
+ 
+}
+.booking_grid-item:nth-child(7){
+    background-image: url(../assets/photos/room6.jpg);
+
+}
+.booking_grid-item:nth-child(8){
+    background-image: url(../assets/photos/room7.jpg);
+    background-position:bottom;
+
+}
+.booking_grid-item:nth-child(9){
+    background-image: url(../assets/photos/room8.jpg);
+
+}
+.booking_grid-item:nth-child(10){
+    background-image: url(../assets/photos/room9.jpg);
+  
+}
+.booking_grid-item:nth-child(11){
+    background-image: url(../assets/photos/room10.jpg);
+  
+}
+.booking_grid-item:nth-child(12){
+    background-image: url(../assets/photos/08-night.jpg);
+
+}
+
+
+/*****MEDIA QUERIES BOOKING PAGE*****/
+@media screen and (max-width: 600px){
+
+    .booking__wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 4rem 2fr 1fr 5fr;
+        grid-template-areas: 
+        "hamburger"
+        "main"
+        "search"
+        "grids";
+    }
+    .navbar{
+        display: none;
+    }
+    .fake__hamburger{
+        display: flex;
+    }
+    .main__book-container{
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .booking_grid-item{
+        width: 90%;
+        height: 15rem;
+        background-size:cover;
+        
+    
+    }
+    .search__area-options{
+        flex-direction: column;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+/************ABOUT PAGE**********/
+
+.about__wrapper{
+    height: 200vh;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(33, 168, 127);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.2fr 4fr 3fr 3fr 2fr;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar navbar"
+    "main main image image image image"
+    "img1 img1 img1 article article article"
+    "img2 img2 img2 img3 img3 img3"
+    "footer footer footer footer footer footer";
+}
+
+.main__about{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    text-align: center;
+    gap: 2rem
+
+}
+.about__heading{
+    text-decoration: underline;
+    font-size: 3rem;
+    background-color: rgb(33, 168, 127);
+
+
+}
+.main__about-image{
+    grid-area: image;
+    background-image: url(../assets/photos/about_image.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.aside__img1{
+    display: flex;
+    grid-area: img1;
+    width: 100%;
+    height: 100%;
+  
+    background-image: url(../assets/photos/01-day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(33, 168, 127);
+    background-position: 50%;
+}
+.aside__img2{
+    display: flex;
+    flex-shrink: 10;
+    grid-area: img2;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/photos/06-day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(33, 168, 127);
+    background-position: 50%;
+}
+.aside__img3{
+    display: flex;
+    flex-shrink: 3;
+    grid-area: img3;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/photos/05-day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(33, 168, 127);
+    background-position: 50%;
+}
+.about__article{
+    display: flex;
+    flex-direction: column;
+    grid-area: article;
+    text-align: center;
+    color: white;
+    margin: auto;
+    background-color: inherit;
+    gap: 2rem;
+}
+.about__article-heading{
+    font-size: 3rem;
+    text-decoration:underline;
+    background-color: black;
+
+}
+
+.about__footer{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(55, 55, 55);
+    color: rgb(57, 233, 160);
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+.about__footer-heading{
+    transform: translateY(100%);
+}
+
+.about__list{
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+}
+.about__footer-image{
+    background-image: url(../assets/logo/bonz.ai-logo-white-symbol.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 6rem;
+    height: 6rem;
+}
+
+@media screen and (max-width: 600px){
+
+    .about__wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 4rem 8fr 4fr 3fr 3fr 3fr 4fr;
+        grid-template-areas:
+        "hamburger" 
+        "main"
+        "article"
+        "img1"
+        "img2"
+        "img3"
+        "footer";
+    }
+    .fake__hamburger{
+        display: flex;
+    }
+    .main__about-image{
+        grid-area: main;
+
+    }
+    .main__about{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 80%;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.177);
+        backdrop-filter: blur(5px);
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 0.2rem solid black;
+    }
+
+    .aside__img1{
+        background-size: 100%;
+  
+    }
+    .aside__img2{
+        background-size: 100%;
+    }
+    .aside__img3{
+        background-size: 100%;
+    }
+
+    
+}
